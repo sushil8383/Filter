@@ -2,26 +2,18 @@
 <html>
 <head>
 	<title></title>
-	<style>
-		*{box-sizing: border-box;}
-			h2{font-family: sans-serif;color:white;}
+	<!-- style the filter -->
+	<link rel="stylesheet" type="text/css" href="filter.css">
 
-			.con{width: 300px;height: 300px;background-color: red;position: absolute;top: 50%;left:50%;transform: translate(-50%,-50%);padding-left: 50px;background-image: linear-gradient(to bottom right,blue,red);box-shadow: 10px 10px 5px;}
-			input[type="text"]{outline: none;border-radius: 5px;padding:3px;margin-left: 7px;}
-			#myUL{list-style-type: none;padding: 0;}
-			li{border-bottom: 1px solid white;width: 200px;border-right: 1px solid white;border-left: 1px solid white;padding: 1px;margin-top: 5px;}
-			a{text-decoration: none;color:white;}
-
-
-		
-	</style>
 </head>
 <body>
+
+	
 	<div class="con">
 	<h2>My Phonebook</h2>
 	<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Serach for names.." title="Type in a name">
 	<ul id="myUL">
-		<li><a href="#">rohit</a></li>
+		<li><a href="javascript:void(0)">rohit</a></li>
 		<li><a href="#">ani</a></li>
 		<li><a href="#">Billy</a></li>
 		<li><a href="#">Bob</a></li>
@@ -32,25 +24,11 @@
 	
 </div>
 
-	<script>
-		function myFunction() {
-			var input,filter,ul,li,a,i,txtvalue;
-			input = document.getElementById('myInput');
-			filter = input.value.toUpperCase();
-			ul = document.getElementById('myUL');
-			li = ul.getElementsByTagName('li');
-			for(i = 0; i<li.length;i++)
-			{
-				a=li[i].getElementsByTagName('a')[0];
-				txtvalue = a.textContent || a.innerText;
-				if(txtvalue.toUpperCase().indexOf(filter) > -1){
-					li[i].style.display = "";
-				} else{
-					li[i].style.display = "none";
-				}
-			}
-		}
-	</script>
+<!-- add javascript -->
+
+<script src="filter.js"></script>
+
+	
 
 
 </body>
