@@ -6,5 +6,7 @@ This is a simple filter project including three files with HTML ,CSS and JAVASCR
 filter.html -- this is for structure building ,
 filter.css --  for styling the structure and ,
 filter.js -- for filter the content and match with every single word.
+filter.html
+
 
 
